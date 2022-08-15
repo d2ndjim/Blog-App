@@ -14,7 +14,7 @@ RSpec.describe 'Users', type: :request do
 
     it 'should render the correct text in the template' do
       get users_path
-      expect(response.body).to include('list of users is here')
+      expect(response.body).to include('display users list')
     end
   end
 
