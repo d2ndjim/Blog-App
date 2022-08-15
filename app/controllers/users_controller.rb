@@ -3,5 +3,6 @@ class UsersController < ApplicationController
   end
 
   def show
+    # puts params
   end
 end
