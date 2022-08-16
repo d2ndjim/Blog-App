@@ -1,1 +1,19 @@
-<h1>Show the user details by ID</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @user.bio %>
+</p>
+
+<% @user.three_recent_posts.each do |post| %>
+  <div class="comment_con">
+    <h2><%= post.title%></h2>
+    <p><%= post.text%></p>
+    <h3>Comment <%= post.comments_counter%>,  <span>Likes <%= post.likes_counter%></span></h3>
+  </div>
+<%end%>
+
+<%= button_to "See all posts", user_posts_path(@user), class:"btn btn-danger" %>
