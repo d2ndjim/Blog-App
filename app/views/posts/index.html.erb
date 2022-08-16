@@ -1,30 +1,16 @@
 <div class="user">
   <div class="user_data">
-    <h2><%= @user.name%></h2>
+    <h3><%= @user.name%></h3>
     <p>Number of posts: <%= @user.posts_counter %></p>
   </div>
 </div>
 
 <% @posts.each do |post| %>
   <%= render post %>
-  <div class="comments">
-
-    <% post.recent_5_comments.each do |comment| %>
-
-       <h2><%= comment.author.name%>: <%= comment.text%></h2>
-    <%end%>
-  </div>
 <%end%>
 
-
-
-
 <div class="button-wrapper">
-
   <button class="button">
-
-      Pagination
-
+    Pagination
   </button>
-
 </div>
