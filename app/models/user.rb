@@ -13,4 +13,3 @@ class User < ApplicationRecord
     Post.last(3)
   end
 end
-
