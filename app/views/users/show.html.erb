@@ -1,19 +1,25 @@
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @user.bio %>
-</p>
-
-<% @user.three_recent_posts.each do |post| %>
-  <div class="comment_con">
-    <h2><%= post.title%></h2>
-    <p><%= post.text%></p>
-    <h3>Comment <%= post.comments_counter%>,  <span>Likes <%= post.likes_counter%></span></h3>
+<div class="m-4">
+  <div class="d-flex gap-3 border border-dark">
+    <%= @user.photo %>
+    <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+    </p>
   </div>
-<%end%>
+  <div class="border border-dark my-2 ">
+    <p class="d-flex flex-column">
+      <strong>Bio:</strong>
+      <%= @user.bio %>
+    </p>
+  </div>
 
-<%= button_to "See all posts", user_posts_path(@user), class:"btn btn-danger" %>
+  <% @user.three_recent_posts.each do |post| %>
+    <div class="comments border border-dark">
+      <h4><%= post.title%></h4>
+      <p><%= post.text%></p>
+      <h5>Comment <%= post.comments_counter%>,  <span>Likes <%= post.likes_counter%></span></h5>
+    </div>
+  <%end%>
+  <br />
+  <%= link_to "See all posts", user_posts_path(@user), class:"btn btn-dark" %>
+</div>
