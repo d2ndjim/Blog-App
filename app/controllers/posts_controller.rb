@@ -18,7 +18,6 @@ class PostsController < ApplicationController
     new_post = current_user.posts.new(post_params)
     new_post.likes_counter = 0
     new_post.comments_counter = 0
-    new_post.update_posts_counter
     respond_to do |format|
       if new_post.save
         format.html { redirect_to "/users/#{new_post.author.id}/posts/", notice: "Post was successfully created." }
