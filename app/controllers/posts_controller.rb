@@ -20,9 +20,9 @@ class PostsController < ApplicationController
     new_post.comments_counter = 0
     respond_to do |format|
       if new_post.save
-        format.html { redirect_to "/users/#{new_post.author.id}/posts/", notice: "Post was successfully created." }
+        format.html { redirect_to "/users/#{new_post.author.id}/posts/", notice: 'Post was successfully created.' }
       else
-        format.html { render :new, alert: "Error in creating post" }
+        format.html { render :new, alert: 'Error in creating post' }
       end
     end
   end
