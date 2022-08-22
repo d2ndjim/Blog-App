@@ -9,7 +9,7 @@ The Blog app is a classic example of a blog website. Created a fully functional 
 
 - Open your terminal or command line
 - Run "git clone Paste `https://github.com/d2ndjim/Blog-App`
-- Open the folder with your code editor
+- Open the folder in your code editor
 
 ## To run the tests
 
@@ -32,6 +32,12 @@ Run tests with:
 👤 **Lekan Jimoh**
 
 - GitHub: [@d2ndjim](https://github.com/d2ndjim)
+- Twitter: [@d2ndjim](https://twitter.com/d2ndjim_)
+- LinkedIn: [Lekan Jimoh](https://linkedin.com/in/lekanj)
+
+👤 **Yasin Warsame**
+
+- GitHub: [@d2ndjim](https://github.com/Yazino12)
 - Twitter: [@d2ndjim](https://twitter.com/d2ndjim_)
 - LinkedIn: [Lekan Jimoh](https://linkedin.com/in/lekanj)
 

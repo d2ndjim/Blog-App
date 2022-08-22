@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if new_comment.save
       redirect_to user_posts_path(user_id: new_comment.post_id), notice: 'Success!'
     else
-      render :new, alert:
+      render :new, alert: 'Error Occurred'
     end
   end
 
@@ -19,4 +19,3 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:text)[:text]
   end
 end
-
