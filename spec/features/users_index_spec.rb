@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe 'Users index page', type: :feature do
   before :each do
     @user1 = User.create!(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-    user2 = User.create!(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
+    @user2 = User.create!(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
   end
 
   it 'displays all users' do
@@ -19,7 +19,7 @@ RSpec.describe 'Users index page', type: :feature do
     expect(page).to have_content('https://unsplash.com/photos/F_-0BxGuVvo')
   end
 
-   it 'displays number of posts' do
+  it 'displays number of posts' do
     visit '/'
     expect(page).to have_content('0')
   end
@@ -30,4 +30,3 @@ RSpec.describe 'Users index page', type: :feature do
     expect(page).to have_current_path user_path(@user1)
   end
 end
-

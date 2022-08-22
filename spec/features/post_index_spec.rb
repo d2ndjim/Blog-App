@@ -35,6 +35,6 @@ RSpec.describe 'Posts index page', type: :feature do
   end
   it 'after clicking on a post, redirect on a post show page' do
     click_link(@first_post.title)
-    expect(page).to have_content("Comment 5")
+    expect(page).to have_content('Comment 5')
   end
 end
