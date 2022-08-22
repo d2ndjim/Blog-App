@@ -10,7 +10,7 @@
 <div>
   <div class="card">
     <div class="card-header">
-      <h4><% @comments.each do |comment| %>
+      <h4><% @post.recent_5_comments.each do |comment| %>
         <h2><%= comment.author.name%>: <%= comment.text%></h2>
       <%end%></h4>
     </div>
