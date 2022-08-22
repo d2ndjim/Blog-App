@@ -38,15 +38,8 @@ RSpec.describe 'Test the User show page' do
     expect(page).to have_content('See all posts')
   end
 
-  it 'go to post#show page when a user click to view post' do
-    first(post.title).click
-    expect(page).to have_content('Like this post')
-    expect(page).to have_content('Comments 0 Likes 0')
-  end
-
   it 'go to the users post#index page when a user click on view all post' do
-    click_link('See all posts')
-    expect(page).to have_content(@user.bio)
-    expect(page).to have_content("Number of posts: #{@user.posts_counter}")
+    click_link 'See all posts'
+    expect(page).to have_current_path user_posts_path(@user)
   end
 end
