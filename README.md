@@ -1,4 +1,5 @@
 # Blog-App
+
 The Blog app is a classic example of a blog website. Created a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## Built With
@@ -37,9 +38,9 @@ Run tests with:
 
 👤 **Yasin Warsame**
 
-- GitHub: [@d2ndjim](https://github.com/Yazino12)
-- Twitter: [@d2ndjim](https://twitter.com/d2ndjim_)
-- LinkedIn: [Lekan Jimoh](https://linkedin.com/in/lekanj)
+- GitHub: [@Yazino12](https://github.com/Yazino12)
+- Twitter: [@yasino24](https://twitter.com/yasino24)
+- LinkedIn: [yasin-warsame](https://linkedin.com/in/yasin-warsame-a4176217a)
 
 ## 🤝 Contributing
 
