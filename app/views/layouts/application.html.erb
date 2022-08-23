@@ -17,7 +17,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <br />
+      <% if notice %>
+        <%= render 'layouts/alerts' %>
+      <% end %>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
