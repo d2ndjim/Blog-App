@@ -6,6 +6,12 @@
       <%= form.submit "Like this post", class: "btn btn-danger"%>
     <% end %>
     <h3>Comment <%= @post.comments_counter%>,  <span>Likes <%= @post.likes_counter%></span></h3>
+    <% if can? :destroy, @post %>
+      <%= button_to 'Delete Post',
+            post_path,
+            method: :delete,
+            data: {confirm: 'Are You Sure You Want to Delete This Post'}, class: 'btn btn-danger'%>
+    <% end %>
   </div>
 </div>
 <div>
@@ -13,7 +19,14 @@
     <div class="card-header">
       <h4><% @post.recent_5_comments.each do |comment| %>
         <h2><%= comment.author.name%>: <%= comment.text%></h2>
-      <%end%></h4>
+        <% if can? :destroy, comment %>
+        <%= link_to "Destroy", post_comment_path(comment_id: comment.id,  post_id: @post.id), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  }, class: 'comment btn btn-danger' %>
+        <%end%>
+      <%end%>
+      </h4>
     </div>
     <div class="card-body">
       <p class="card-text"><%= render "creation_of_comments", comment: @post %></p>
