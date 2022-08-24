@@ -44,6 +44,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 gem 'bullet'
 gem 'rails-controller-testing'
+gem 'cancancan', '~> 3.4'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
