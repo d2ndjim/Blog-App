@@ -12,4 +12,8 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes
   end
+
+  get 'api/users/:id/posts' => 'users#api_show', format: 'json'
+  get 'api/users/:id/posts/:id/comments' => 'posts#api_show', format: 'json'
+  post 'api/users/:id/posts/:id/comments' => 'posts#api_create'
 end

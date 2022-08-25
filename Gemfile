@@ -45,6 +45,8 @@ gem 'bootsnap', require: false
 gem 'bullet'
 gem 'cancancan', '~> 3.4'
 gem 'rails-controller-testing'
+gem 'jwt', '~> 2.4', '>= 2.4.1'
+gem 'bcrypt', '~> 3.1', '>= 3.1.18'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
