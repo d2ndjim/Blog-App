@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def index
     @users = User.all
@@ -13,4 +13,5 @@ class UsersController < ApplicationController
     @posts = User.find(params[:id]).posts
     render json: { data: @posts }, status: :ok
   end
+
 end
