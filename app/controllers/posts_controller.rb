@@ -28,6 +28,22 @@ class PostsController < ApplicationController
     end
   end
 
+  def api_show
+    @post = Post.find(params[:id])
+    @comments = @post.comments
+    render json: { data: @comments }, status: :ok
+  end
+
+  def api_create
+    @post = Post.find(params[:id])
+    @comment = current_user.comments.new(
+      text: comment_params,
+      author_id: current_user.id,
+      post_id: @post.id
+    )
+    render json: { data: @comment }, status: :ok
+  end
+
   def destroy
     post = Post.find(params[:id])
     user = User.find(post.author_id)

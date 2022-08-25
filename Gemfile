@@ -46,6 +46,8 @@ gem 'bullet'
 gem 'cancancan', '~> 3.4'
 gem 'rails-controller-testing'
 
+gem 'devise-jwt'
+gem 'rack-cors'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
